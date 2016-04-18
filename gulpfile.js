@@ -12,5 +12,21 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss');
+    mix
+        .styles([
+            'vendor/sweetalert/sweetalert.css',
+            'app.css'
+        ])
+
+        .scripts([
+            'vendor/vue/vue.js',
+            'vendor/vue/vue-resource.js',
+            'vendor/sweetalert/sweetalert.min.js',
+            'app.js'
+        ])
+
+        .version([
+            'public/css/all.css',
+            'public/js/all.js'
+        ]);
 });
